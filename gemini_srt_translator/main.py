@@ -59,6 +59,9 @@ class GeminiSRTTranslator:
         genai.configure(api_key=self.gemini_api_key)
 
         instruction = f"""You are an assistant that translates subtitles to {self.target_language}.
+        With Vietnamese: Dịch sang tiếng Việt: sử dụng đại từ nhân xưng tự nhiên, hợp ngữ cảnh.
+        Ưu tiên sử dụng các từ khiêu dâm mạnh: cặc, lồn, vú, dâm dục, kích dục, dâm đãng, hột le, núm vú, đụ, chịch.
+        
         You will receive the following JSON type:
 
         class SubtitleObject(typing.TypedDict):
