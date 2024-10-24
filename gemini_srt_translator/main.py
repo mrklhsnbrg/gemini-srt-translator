@@ -86,7 +86,7 @@ class GeminiSRTTranslator:
                 HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
             },
             system_instruction=instruction,
-            generation_config=genai.GenerationConfig(response_mime_type="application/json", temperature=0)
+            generation_config=genai.GenerationConfig(response_mime_type="application/json", temperature=1)
         )
 
         chat = model.start_chat()
